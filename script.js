@@ -48,7 +48,6 @@ function addDeleteButton(li){
 		delBtn.appendChild(document.createTextNode("Delete"));
 		delBtn.classList.add("btn","btn-danger");
 
-		console.log('li outside eventl', li);
 		delBtn.addEventListener("click", (e) => {
 			li.parentElement.removeChild(li);
 			//or
