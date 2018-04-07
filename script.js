@@ -1,18 +1,17 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-var bunchOfLi= document.querySelectorAll("li");
+const button = document.getElementById("enter");
+const input = document.getElementById("userinput");
+const ul = document.querySelector("ul");
+const bunchOfLi= document.querySelectorAll("li");
 
 function inputLength() {
 	return input.value.length;
 }
 
 function createListElement() {
-	var li = document.createElement("li");
+	let li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
 	li.classList.add("list-group-item", "d-flex", "justify-content-between");
 	li.appendChild(addDeleteButton(li));
-
 
 	ul.appendChild(li);
 	input.value = "";
@@ -31,12 +30,12 @@ function addListAfterKeypress(event) {
 	}
 }
 
+
+
 button.addEventListener("click", addListAfterClick);
-
 input.addEventListener("keypress", addListAfterKeypress);
-
-bunchOfLi.forEach(function(li, i){
-		li.addEventListener("click", function(e){
+bunchOfLi.forEach((li, i) => {
+		li.addEventListener("click", (e) => {
 			li.classList.toggle('done');
 		});
 		li.appendChild(addDeleteButton(li));
@@ -45,13 +44,13 @@ bunchOfLi.forEach(function(li, i){
 
 function addDeleteButton(li){
 
-		var delBtn= document.createElement("button");
+		let delBtn= document.createElement("button");
 		delBtn.appendChild(document.createTextNode("Delete"));
 		delBtn.classList.add("btn","btn-danger");
 
-		delBtn.addEventListener("click", function(e){
-
-			this.parentElement.parentElement.removeChild(li);
+		console.log('li outside eventl', li);
+		delBtn.addEventListener("click", (e) => {
+			li.parentElement.removeChild(li);
 			//or
             //e.target.parentElement.parentElement.removeChild(li);
 		});
