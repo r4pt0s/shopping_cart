@@ -75,5 +75,5 @@ bunchOfLi.forEach((li, i) => {
 button.addEventListener("click", addListAfterClick);
 //add Event Listener to Keyboard. Only executed if something is typed in the input field and the curser is still active there
 input.addEventListener("keypress", addListAfterKeypress);
-//add Event Listener to UL element which holds all the tasks
+//add Event Listener to UL element which holds all the tasks 
 ul.addEventListener("click", workWithLi);
