@@ -1,7 +1,8 @@
-let button = document.getElementById("enter");		//get the 'enter' button by ID
-let input = document.getElementById("userinput");	// get the input text field by ID
-let ul = document.querySelector("ul");				// use of new ES5 Syntax to get HTML DOM ELEMENT
-let bunchOfLi= document.querySelectorAll("li");		// use of new ES5 Syntax to get a Nodelist 
+const button = document.getElementById("enter");		//get the 'enter' button by ID
+const input = document.getElementById("userinput");	// get the input text field by ID
+let   ul = document.querySelector("ul");				// use of new ES5 Syntax to get HTML DOM ELEMENT
+const bunchOfLi= document.querySelectorAll("li");		// use of new ES5 Syntax to get a Nodelist 
+
 
 const inputLength = () => {
 	//returns the count of characters from the input text field
